@@ -1,0 +1,4 @@
+venv/
+dist/
+build/
+scrapy_user_agent_rotator.egg-info/
