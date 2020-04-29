@@ -44,9 +44,9 @@ class RotateUserAgentMiddleware(object):
 
         if self.items_scraped >= self.item_count:
             self.items_scraped = 0
+            self.item_count = random.randint(self.min_item_count, self.max_item_count)
 
             if self.choose_randomly:
-                self.item_count = random.randint(self.min_item_count, self.max_item_count)
                 self.user_agent = str(random.choice(self.user_agents))
             else:
                 self.user_agent = next(self.user_agents)
