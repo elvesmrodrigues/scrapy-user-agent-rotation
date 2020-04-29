@@ -1,6 +1,8 @@
 # scrapy-user-agent-rotator
 
-Este módulo tem por finalidade permitir rotacionar user-agents no [Scrapy](https://scrapy.org/). Suas funcionalidades são:
+Este módulo tem por finalidade permitir rotacionar user-agents no [Scrapy](https://scrapy.org/). 
+
+Suas funcionalidades são:
 - Rotacionar user-agent a cada **n** número de requisições feitas, sendo **n** um número escolhido ao acaso entre um mínimo e máximo.
     - Obs.: O valor de **n** será escolhido novamente ao acaso no momento de troca de user-agent. A finalidade disso é dificultar o trabalho de possíveis mecanismos de rastreamento contra crawlers.
 - Escolha aleatória ou cíclica de um novo user-agent quando **n** requisições forem feitas. 
@@ -8,7 +10,7 @@ Este módulo tem por finalidade permitir rotacionar user-agents no [Scrapy](http
 **Como usar**:
 - Instale este módulo via **pip**:
     ```bash
-    pip install ...
+    pip install scrapy-user-agent-rotator
     ```
 - Configure seu projeto Scrapy para que possa usá-lo(**settings.py**):
     ```python
