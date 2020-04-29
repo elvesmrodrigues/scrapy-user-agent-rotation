@@ -10,7 +10,7 @@ Suas funcionalidades são:
 **Como usar**:
 - Instale este módulo via **pip**:
     ```bash
-    pip install ...
+    pip install scrapy-user-agent-rotator
     ```
 - Configure seu projeto Scrapy para que possa usá-lo(**settings.py**):
     ```python
