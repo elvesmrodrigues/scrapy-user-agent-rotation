@@ -1,0 +1,1 @@
+from user_agent_rotator.middlewares import RotateUserAgentMiddleware
