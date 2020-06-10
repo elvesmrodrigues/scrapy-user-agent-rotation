@@ -8,6 +8,8 @@ from user_agent_rotator import RotateUserAgentMiddleware
 
 class TestUserAgentRotator(unittest.TestCase):
     def test_rotation(self):
+        '''Tests whether user-agents are being rotated'''
+        
         user_agents = ['Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.1 Safari/537.36',
             'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36',
             'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.0 Safari/537.36',

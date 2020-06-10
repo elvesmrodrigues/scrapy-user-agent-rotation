@@ -1,0 +1,8 @@
+README.md
+setup.py
+scrapy_user_agent_rotation.egg-info/PKG-INFO
+scrapy_user_agent_rotation.egg-info/SOURCES.txt
+scrapy_user_agent_rotation.egg-info/dependency_links.txt
+scrapy_user_agent_rotation.egg-info/top_level.txt
+user_agent_rotator/__init__.py
+user_agent_rotator/middlewares.py

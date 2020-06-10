@@ -6,7 +6,7 @@ Este módulo tem por finalidade permitir rotacionar user-agents no [Scrapy](http
 
 - Maneira mais simples, via **pip**:
     ```bash
-    pip install scrapy-user-agent-rotator
+    pip install scrapy-user-agent-rotation
     ```
 ## Como usar
 

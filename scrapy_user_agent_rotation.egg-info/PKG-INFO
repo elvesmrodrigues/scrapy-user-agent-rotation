@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: scrapy-user-agent-rotation
+Version: 0.0.1
+Summary: Rotacionador de user-agent para Scrapy
+Home-page: https://github.com/elvesrodrigues/scrapy-user-agent-rotation
+Author: Elves M. Rodrigues
+Author-email: elvesmateusrodrigues@gmail.com
+License: UNKNOWN
+Description: # scrapy-user-agent-rotator
+        
+        Este módulo tem por finalidade permitir rotacionar user-agents no [Scrapy](https://scrapy.org/). 
+        
+        ## Instalação
+        
+        - Maneira mais simples, via **pip**:
+            ```bash
+            pip install scrapy-user-agent-rotation
+            ```
+        ## Como usar
+        
+        - No arquivo de configuração de seu projeto Scrapy, adicione as seguintes linhas (**settings.py**):
+            ```python
+            DOWNLOADER_MIDDLEWARES = {
+                ...,
+                'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
+                'user_agent_rotator.middlewares.RotateUserAgentMiddleware': 500,
+            }
+            ```
+        - Defina a lista de user-agents, ative o módulo e defina um uso mínimo e máximo de cada user-agent (o uso de um user-agent será aleatório entre esses números) (**settings.py**):
+            ```python
+            USER_AGENTS = ['user-agent-1', 'user-agent-2',...,'user-agent-n']
+            ROTATE_USER_AGENT_ENABLED = True
+            MIN_USER_AGENT_USAGE = #uso mínimo de user-agent
+            MAX_USER_AGENT_USAGE = #uso máximo de user-agent
+            ```
+        
+        - É possível conferir o user-agent usado no site: https://www.whatismybrowser.com/detect/what-is-my-user-agent 
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown

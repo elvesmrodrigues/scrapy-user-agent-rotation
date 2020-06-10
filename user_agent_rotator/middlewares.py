@@ -37,9 +37,7 @@ class RotateUserAgentMiddleware(object):
         if user_agents is None or min_usage < 0 or max_usage < 0:
             raise NotConfigured()
 
-        obj = cls(user_agents, min_usage, max_usage)
-
-        return obj
+        return cls(user_agents, min_usage, max_usage)
 
     def process_request(self, request, spider):
         if self.items_scraped >= self.limit_usage:
@@ -49,5 +47,4 @@ class RotateUserAgentMiddleware(object):
             self.user_agent = next(self.user_agents)
 
         request.headers['user-agent'] = self.user_agent
-
         self.items_scraped += 1
